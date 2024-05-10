@@ -9,3 +9,9 @@ elif count == 0:
     print("prime")
 else:
     print("not prime")
+
+
+if(num%2==0):
+    print("number is even")
+else:
+     print("odd")
