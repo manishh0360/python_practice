@@ -1,10 +1,14 @@
-print("*****Sum of N terms*****")
-
-F_term = float(input("Enter first term: "))
-a = F_term
-C_diff = float(input("Enter common diffrence: "))
-d=C_diff
-N_terms=float(input("Enter number of terms: "))
-n=N_terms
-Sn= float(n/2 * (a * 2 + (n - 1) * d))
-print(Sn)
+def isGoodMatrixCheck(arr):
+    dic = {}
+    for i in range(len(arr)):
+        if arr[i] in dic:
+            return False
+        else:
+            dic[arr[i]] = i
+    return True
+def isGoodMatrix(matrix):
+    for i in range(len(matrix)):
+        if isGoodMatrixCheck(matrix[i]) == False:
+            return "matrix is not good"
+    return "Matrix is Good"
+print(isGoodMatrix([[1,2,3],[2,1,3],[4,5,6]])) 
